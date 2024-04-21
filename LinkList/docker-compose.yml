@@ -1,0 +1,10 @@
+version: '3'
+services:
+  linklist:
+    image: linklist_image
+    build:
+      context: .
+    container_name: linklist_app
+    command: ["/linklist/docker/app.sh"]
+    ports:
+      - "7777:8000"

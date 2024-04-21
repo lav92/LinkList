@@ -1,0 +1,5 @@
+select auth_user.id, email, date_joined, count(email) as link_count from auth_user
+join links_link on auth_user.id = links_link.owners_id
+group by email
+order by link_count desc, date_joined
+limit 10
