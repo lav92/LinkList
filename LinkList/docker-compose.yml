@@ -5,6 +5,6 @@ services:
     build:
       context: .
     container_name: linklist_app
-    command: ["/linklist/docker/app.sh"]
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "7777:8000"

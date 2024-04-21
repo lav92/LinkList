@@ -11,3 +11,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 RUN chmod a+x /linklist/docker/*.sh
+
+CMD python manage.py migrate
